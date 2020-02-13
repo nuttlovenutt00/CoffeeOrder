@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /CoffeeOrder
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets|css|js|vendors|plugins|swal|csslogin)
+RewriteRule ^(.*)$ /CoffeeOrder/index.php?/$1 [L]
+RewriteRule !.(js|gif|jpg|png|css|eot|svg|ttf|woff|woff2|map)$ index.php
+
